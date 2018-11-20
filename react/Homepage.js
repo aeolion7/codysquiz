@@ -5,4 +5,3 @@ export default class Homepage extends React.Component {
     return <div id="clubhouse-homepage" />;
   }
 }
-Î;
