@@ -6,9 +6,9 @@ export default class FavoriteFoods extends React.Component {
       <div>
         <h1>Favorite Foods</h1>
         <ul id="food-list">
-        {this.props.foods.map(food => {
-          return <li key={food.id}>{food.name}</li>;
-        })};
+          {this.props.foods.map(food => {
+            return <li key={food.id}>{food.name}</li>;
+          })};
         </ul>
       </div>
     );

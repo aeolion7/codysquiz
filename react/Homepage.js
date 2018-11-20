@@ -7,13 +7,15 @@ export default class Homepage extends React.Component {
     super();
     this.state = {
       favoriteFoods: [],
-      pugProfile: {}
-    }
+      pugProfile: {},
+    };
   }
   render() {
-    return <div id="clubhouse-homepage">
-    <Profile profile={this.state.pugProfile}/>
-    <FavoriteFoods foods={this.state.favoriteFoods}/>
-    </div>;
+    return (
+      <div id="clubhouse-homepage">
+        <Profile profile={this.state.pugProfile} />
+        <FavoriteFoods foods={this.state.favoriteFoods} />
+      </div>
+    );
   }
 }
