@@ -20,28 +20,28 @@ describe('Homepage', () => {
   });
 
   describe('renders the other components', () => {
-    xit('renders the Profile component', () => {
+    it('renders the Profile component', () => {
       expect(HomepageWrapper.find(Profile)).to.have.length(1);
     });
 
-    xit('renders the FavoriteFoods component', () => {
+    it('renders the FavoriteFoods component', () => {
       expect(HomepageWrapper.find(FavoriteFoods)).to.have.length(1);
     });
   }); // end describe renders the other components
 
   describe('manages state for the Profile and FavoriteFoods components', () => {
-    xit('starts with an initial state object', () => {
+    it('starts with an initial state object', () => {
       const currentState = HomepageWrapper.state();
       expect(currentState).to.be.an('object');
     });
 
-    xit('state object starts with an empty favoriteFoods array', () => {
+    it('state object starts with an empty favoriteFoods array', () => {
       const currentState = HomepageWrapper.state();
       expect(currentState.favoriteFoods).to.be.an('array');
       expect(currentState.favoriteFoods.length).to.be.equal(0);
     });
 
-    xit('state object starts with an empty pugProfile object', () => {
+    it('state object starts with an empty pugProfile object', () => {
       const currentState = HomepageWrapper.state();
       expect(currentState.pugProfile).to.be.an('object');
       expect(currentState.pugProfile).to.be.deep.equal({});
@@ -60,7 +60,7 @@ describe('Homepage', () => {
       { id: 3, name: 'Pancakes' },
     ];
 
-    xit('passes pugProfile from state to Profile as a prop called profile', () => {
+    it('passes pugProfile from state to Profile as a prop called profile', () => {
       // This is just like actually calling setState in the Homepage component!
       // This means the render function executes again!
       // Arf!
@@ -78,7 +78,7 @@ describe('Homepage', () => {
       );
     });
 
-    xit('passes favoriteFoods from state to FavoriteFoods as a prop called foods', () => {
+    it('passes favoriteFoods from state to FavoriteFoods as a prop called foods', () => {
       HomepageWrapper.setState({ favoriteFoods: foods });
 
       const FavoriteFoodsWrapper = HomepageWrapper.find(FavoriteFoods);
@@ -86,7 +86,7 @@ describe('Homepage', () => {
       expect(FavoriteFoodsWrapper.props().foods).to.be.deep.equal(foods);
     });
 
-    xit('passes new props when state is updated', () => {
+    it('passes new props when state is updated', () => {
       const lucaProfile = {
         name: 'Luca',
         age: 5,
